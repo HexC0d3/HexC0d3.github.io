@@ -1,6 +1,6 @@
 ---
 layout: default
 ---
-📲  [About Me](./_includes/about_me.md)
-💪  <a href="_posts/projects.md">Projects</a>
+📲  [About Me](./_includes/about_me.html)
+💪  <a href="_posts/projects.html">Projects</a>
 🧾  [Certications](./_posts/certs.md)

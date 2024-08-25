@@ -2,5 +2,5 @@
 layout: default
 ---
 📲  [About Me](pages/about_me.md)
-💪  <a href="pages/projects.md">Projects</a>
+💪  [Projects](pages/projects.md)
 🧾  [Certications](pages/certs.md)

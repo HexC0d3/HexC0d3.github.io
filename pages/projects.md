@@ -1,7 +1,3 @@
----
-layout: Default
----
-
 ## Interesting Projects I've worked on 🏗
 
 ### Attack Surface Management Platform with integrated Threat Intel 

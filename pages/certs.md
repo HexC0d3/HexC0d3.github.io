@@ -5,7 +5,7 @@
 <tbody>
 <tr style="height: 18px; cborder-style: hidden;">
 <td style="width: 34%; height: 18px; border-style: hidden;">Dec 2021</td>
-<td style="width: 66%; height: 18px; border-style: hidden;"><img style="border-style: hidden;" src="/assets/images/CEH.png" alt="example" width="100%" height="100%" /></td>
+<td style="width: 66%; height: 18px; border-style: hidden;"><img style="border-style: hidden;" src="/assets/images/CEH.png" alt="example" aspect-ratio="auto" height="300" /></td>
 </tr>
 </tbody>
 </table>

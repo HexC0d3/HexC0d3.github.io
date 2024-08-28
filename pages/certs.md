@@ -43,10 +43,10 @@
 <table style="border-collapse: collapse; width: 100%; height: 18px; border-style: hidden;" border="1">
 <tbody>
 <tr style="height: 18px; cborder-style: hidden;">
-<td style="width: 66.4931%; height: 18px; border-style: hidden;">
+<td style="width: 34%; height: 18px; border-style: hidden;">
 <p></p>
 </td>
-<td style="width: 33.5069%; height: 18px; border-style: hidden;">
+<td style="width: 66%; height: 18px; border-style: hidden;">
 <img style="border-style: hidden;" src="/assets/images/CNSP_SecOPS.png"  aspect-ratio="auto" height="300" /></td>
 </tr>
 </tbody>

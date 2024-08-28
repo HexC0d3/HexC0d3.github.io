@@ -7,19 +7,21 @@ layout: default
 <tr style="height: 18px; cborder-style: hidden;">
 <td style="width: 66%; height: 18px; border-style: hidden;">
 
-* 📲  [About Me](pages/about_me.md)
+<li> 📲  [About Me](pages/about_me.md) </li>
+
 
 * 💪  [Projects](pages/projects.md)
 
-* 🧾  [Certications](pages/certs.md)
+- 🧾  [Certications](pages/certs.md)
 
-* 📚  [Articles & Write-Ups](pages/articles.md)
+📚  [Articles & Write-Ups](pages/articles.md)
+<a href = "pages/articles.md" > 📚  Articles & Write-Ups </a>
 
 
 </td>
 <td style="width: 34%; height: 18px; border-style: hidden;">
     <script src="https://tryhackme.com/badge/249244"></script>
-    [![]("https://www.hackthebox.com/badge/374134")](https://app.hackthebox.com/profile/374134)
+    [[]("https://www.hackthebox.com/badge/374134")](https://app.hackthebox.com/profile/374134)
     
 </td>
 </tr>

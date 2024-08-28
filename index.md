@@ -19,7 +19,9 @@ layout: default
 </td>
 <td style="width: 66%; height: 18px; border-style: hidden;">
     <script src="https://tryhackme.com/badge/249244"></script>
-    [<script src="https://www.hackthebox.com/badge/374134"></script>](https://app.hackthebox.com/profile/374134)</td>
+    []("https://www.hackthebox.com/badge/374134")(https://app.hackthebox.com/profile/374134)
+    
+</td>
 </tr>
 </tbody>
 </table>

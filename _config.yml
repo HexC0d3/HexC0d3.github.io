@@ -5,3 +5,6 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 show_downloads: false
 include: _posts
+external:
+  linkedin: "https://www.linkedin.com/in/-himanshu/"
+  medium: "https://medium.com/@hexc0de"

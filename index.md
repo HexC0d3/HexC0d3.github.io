@@ -20,9 +20,10 @@ layout: default
 
 
 </td>
+
 <td style="width: 34%; height: 18px; border-style: hidden;">
     <script src="https://tryhackme.com/badge/249244"></script>
-    <a href="https://app.hackthebox.com/profile/374134"> <script src="https://www.hackthebox.com/badge/374134"></script> </a>
+    <a href="https://app.hackthebox.com/profile/374134" style = "text-decoration: none;"> <script src="https://www.hackthebox.com/badge/374134"></script> </a>
 
 </td>
 </tr>

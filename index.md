@@ -15,14 +15,15 @@ layout: default
 - 🧾  [Certications](pages/certs.md)
 
 📚  [Articles & Write-Ups](pages/articles.md)
-<a href = "pages/articles.md" > 📚  Articles & Write-Ups </a>
+
+* <a href = "pages/articles.md" > 📚  Articles & Write-Ups </a>
 
 
 </td>
 <td style="width: 34%; height: 18px; border-style: hidden;">
     <script src="https://tryhackme.com/badge/249244"></script>
-    [[]("https://www.hackthebox.com/badge/374134")](https://app.hackthebox.com/profile/374134)
-    
+    <a href="https://app.hackthebox.com/profile/374134"> <script src="https://www.hackthebox.com/badge/374134"></script> </a>
+
 </td>
 </tr>
 </tbody>

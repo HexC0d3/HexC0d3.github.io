@@ -8,14 +8,14 @@ layout: default
 <td style="width: 66%; height: 18px; border-style: hidden;">
 
 
-* <a href = "pages/about_me.md" > 📲  About Me </a>
-
-* <a href = "pages/projects.md" > 💪 Projects </a>
-
-* <a href = "pages/certs.md" > 🧾  Certications </a>
-
-* <a href = "pages/articles.md" > 📚  Articles & Write-Ups </a>
-
+* <a href = "pages/about_me" > 📲  About Me </a>
+---
+* <a href = "pages/projects" > 💪 Projects </a>
+---
+* <a href = "pages/certs" > 🧾  Certications </a>
+---
+* <a href = "pages/articles" > 📚  Articles & Write-Ups </a>
+---
 
 </td>
 

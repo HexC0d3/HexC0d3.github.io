@@ -1,3 +1,7 @@
+-----
+layout: default
+-----
+
 # Certifications
 
 - **Certified Red Teamer Professional** (CRTP) *by Altered Security*

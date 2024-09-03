@@ -9,13 +9,13 @@ layout: default
 
 
 * <a href = "pages/about_me" > 📲  About Me </a>
----
+<br>
 * <a href = "pages/projects" > 💪 Projects </a>
----
+<br>
 * <a href = "pages/certs" > 🧾  Certications </a>
----
+<br>
 * <a href = "pages/articles" > 📚  Articles & Write-Ups </a>
----
+<br>
 
 </td>
 

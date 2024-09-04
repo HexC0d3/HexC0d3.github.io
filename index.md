@@ -9,20 +9,21 @@ layout: default
 
 
 * <a href = "pages/about_me" > 📲  About Me </a>
-<br><br><br><br>
+<br><br>
 * <a href = "pages/projects" > 💪 Projects </a>
-<br><br><br><br>
+<br><br>
 * <a href = "pages/certs" > 🧾  Certications </a>
-<br><br><br><br>
+<br><br>
 * <a href = "pages/articles" > 📚  Articles & Write-Ups </a>
-<br><br><br><br>
+<br><br>
 
 </td>
 
 <td style="width: 34%; height: 18px; border-style: hidden;">
+    <a href="https://app.hackthebox.com/profile/374134" target = "_blank" style = "text-decoration: none;"> <script src="https://www.hackthebox.com/badge/374134"></script> </a>
+    <br><br>
     <a target = "_blank" ><script src="https://tryhackme.com/badge/249244"></script> </a>
     <br>
-    <a href="https://app.hackthebox.com/profile/374134" target = "_blank" style = "text-decoration: none;"> <script src="https://www.hackthebox.com/badge/374134"></script> </a>
 
 </td>
 </tr>

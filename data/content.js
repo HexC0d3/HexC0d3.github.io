@@ -63,9 +63,9 @@ export const content = {
     title: "Dossier",
     // First item renders highlighted by default (see components/press.js).
     items: [
-      { name: "Security Research & Publications", date: "CVEs, Articles ands Write-Ups", href: "/publications.html" },
-      { name: "Professional Credentials",    date: "Badges and Certificates", href: "/certifications.html" },
-      { name: "Projects",            date: "Tools and Ideas",   href: "/projects.html" },
+      { name: "Security Research & Publications", date: "CVEs, Articles ands Write-Ups", href: "publications.html" },
+      { name: "Professional Credentials",    date: "Badges and Certificates", href: "certifications.html" },
+      { name: "Projects",            date: "Tools and Ideas",   href: "projects.html" },
       { name: "Skill-Map",     date: "Tech-Stack, Skills and Competencies",   href: "#" },
     ],
   },

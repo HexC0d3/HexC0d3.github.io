@@ -11,10 +11,14 @@ is trivial to drop onto any static host.
 Source of truth stays in css/, js/, data/. Re-run after edits.
 """
 import re
+import shutil
 import pathlib
 
 ROOT = pathlib.Path(__file__).parent
 DIST = ROOT / "dist"
+
+# Standalone pages (outside the SPA bundle) that ship their own assets/site.css + assets/site.js.
+STATIC_PAGES = ["certifications.html", "projects.html", "publications.html"]
 
 # JS is concatenated in dependency order; `import`/`export` are stripped so the
 # modules share one script scope (all top-level names are unique by design).
@@ -63,6 +67,12 @@ def build() -> None:
     DIST.mkdir(exist_ok=True)
     (DIST / "index.html").write_text(html, encoding="utf-8")
     print(f"built -> {DIST / 'index.html'}  ({len(html):,} bytes)")
+
+    # 3) copy the standalone pages + their shared assets as-is (not bundled)
+    for name in STATIC_PAGES:
+        shutil.copy2(ROOT / name, DIST / name)
+    shutil.copytree(ROOT / "assets", DIST / "assets", dirs_exist_ok=True)
+    print(f"copied -> {', '.join(STATIC_PAGES)}, assets/")
 
 
 if __name__ == "__main__":

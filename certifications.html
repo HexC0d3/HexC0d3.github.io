@@ -21,7 +21,7 @@
 
     <section class="cert-table reveal">
       <div class="cert-row head">
-        <span>Certification</span><span>Vendor</span>
+        <span class="cert-col-name">Certification</span><span>Vendor</span>
         <span>eCert ID</span><span>Date</span><span>Verify</span>
       </div>
       <div id="certs"></div>
@@ -60,7 +60,7 @@
 
   const rows = CERTS.map(c => `
     <div class="cert-row">
-      <span class="cert-name"><span class="cert-label">certification</span><span class="tagchip cert-logo">&lt;${esc(c.logo)}&gt;</span>${esc(c.name)}<span class="full">${esc(c.full)}</span></span>
+      <span class="cert-name"><span class="cert-label">certification</span><span class="tagchip cert-logo">&lt;${esc(c.logo)}&gt;</span><span class="cert-title">${esc(c.name)}</span><span class="full">${esc(c.full)}</span></span>
       <span class="cert-vendor"><span class="cert-label">vendor</span>${esc(c.vendor)}</span>
       <span class="cert-id"><span class="cert-label">ecert id</span>${esc(c.id)}</span>
       <span class="cert-date"><span class="cert-label">date</span>${esc(c.issued)}${c.expires ? `<span class="exp">${esc(c.expires)}</span>` : ""}</span>

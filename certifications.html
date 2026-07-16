@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications // 0xCode</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <div class="frame"></div>
+  <nav data-nav></nav>
+
+  <main class="wrap">
+    <header class="sec sec-head">
+      <h1 class="sec-title" data-tag="certs">Certifications</h1>
+      <div class="sec-sub prompt">whoami --credentials</div>
+    </header>
+
+    <section class="cert-table reveal">
+      <div class="cert-row head">
+        <span>Certification</span><span>Vendor</span>
+        <span>eCert ID</span><span>Date</span><span>Verify</span>
+      </div>
+      <div id="certs"></div>
+    </section>
+  </main>
+
+  <footer><span class="c">&lt;/</span>0xCode<span class="c">&gt;</span></footer>
+
+  <script src="assets/site.js"></script>
+  <script>
+  /* ┌──────────────────────────────────────────────┐
+     │  EDIT HERE. One object per certification.      │
+     │  logo   : short tag shown as the <BADGE>       │
+     │  expires: omit / "" if it never expires        │
+     │  verify : the credential-check URL             │
+     └──────────────────────────────────────────────┘ */
+  const CERTS = [
+    { logo:"MCRTA",  name:"MCRTA",  full:"Multi-cloud Red Team Analyst",
+      vendor:"CyberwarFare Labs", id:"MCRTA-6a4cceb8345eOa5B16047ffc", issued:"Jul 2026", expires:"", verify:"https://labs.cyberwarfare.live/credential/achievement/6a4cceb8345e0a5816047ffc" },
+    { logo:"OSCP",  name:"OSCP",  full:"Offensive Security Certified Professional",
+      vendor:"OffSec", id:"OS-XXXXXX", issued:"Dec 2025", expires:"", verify:"https://credentials.offsec.com/4be6453b-0ed1-485d-a3c8-04fa9a80fe55" },
+    { logo:"CRTP",  name:"CRTP",  full:"Certified Red Team Professional",
+      vendor:"Altered Security", id:"ADLID8464", issued:"Aug 2024", expires:"3yr renewal", verify:"https://www.credential.net/25d9a99f-c693-4f85-833e-a1c071612ea2" },
+    { logo:"CNSP", name:"CNSP", full:"Certified Network Security Practitioner",
+      vendor:"The SecOps Group", id:"7262700", issued:"Apr 2023", expires:"", verify:"https://pentestingexams.com/certificate-validation/" },
+    { logo:"AWS",  name:"SCS-C02", full:"AWS Certified Security – Specialty",
+      vendor:"AWS", id:"XXH80FNBGJEE1DC6", issued:"—", expires:"3yr renewal", verify:"https://www.credly.com/badges/64a0aa6f-558b-4db4-b003-db1b260f3bef" },
+    { logo:"CEH",  name:"CEH", full:"Certified Ethical Hacker",
+      vendor:"EC-Council", id:"ECC5309674821", issued:"Dec 2021", expires:"3yr renewal", verify:"https://aspen.eccouncil.org/VerifyBadge?type=certification&a=15KJ8CJZb1hX04MHO6p33hqFkxW1IP3A/BkJKxjdq1w=" },
+    { logo:"eJPT",  name:"eJPT", full:"eLearnSecurity Junior Penetration Tester",
+      vendor:"INE / eLearnSecurity", id:"7836658", issued:"Dec 2020", expires:"", verify:"https://certs.ine.com/ae8cdc09-ce12-4c92-a068-a3627a7895ef" },
+    { logo:"CCNA",  name:"CCNA", full:"Cisco Certified Network Associate (Routing and Switching)",
+      vendor:"Cisco", id:"CSCO13415095", issued:"Apr 2019", expires:"3yr renewal", verify:"https://www.credly.com/badges/363d65a8-160d-4771-8317-7ce66674b6b2/public_url" },
+
+  ];
+
+  const rows = CERTS.map(c => `
+    <div class="cert-row">
+      <span class="cert-name"><span class="cert-label">certification</span><span class="tagchip cert-logo">&lt;${esc(c.logo)}&gt;</span>${esc(c.name)}<span class="full">${esc(c.full)}</span></span>
+      <span class="cert-vendor"><span class="cert-label">vendor</span>${esc(c.vendor)}</span>
+      <span class="cert-id"><span class="cert-label">ecert id</span>${esc(c.id)}</span>
+      <span class="cert-date"><span class="cert-label">date</span>${esc(c.issued)}${c.expires ? `<span class="exp">${esc(c.expires)}</span>` : ""}</span>
+      <span><a class="btn" href="${esc(c.verify)}" target="_blank" rel="noopener">verify <span class="arw">↗</span></a></span>
+    </div>`).join("");
+  document.getElementById("certs").innerHTML = rows;
+
+  mountNav("HB");
+  initReveal();
+  </script>
+</body>
+</html>

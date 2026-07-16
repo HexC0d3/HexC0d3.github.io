@@ -1,0 +1,35 @@
+/* ============================================================
+   DESIGN TOKENS
+   Retheme the entire site by editing these variables.
+   Want a red/amber build? Swap the greens below.
+   ============================================================ */
+:root {
+  /* surfaces */
+  --bg:          #0a0d09;
+  --bg-2:        #10140d;
+
+  /* accent ramp */
+  --green:       #45e845;   /* primary neon           */
+  --green-bright:#5dff5d;   /* highlights / active     */
+  --green-dim:   #2f7a34;   /* code tags, secondary    */
+  --green-faint: #1c3c1e;   /* hairlines, dashed rings */
+  --border:      #274d27;   /* structural borders      */
+
+  /* text */
+  --text:        #e9f2e9;
+
+  /* effects */
+  --glow:        rgba(69, 232, 69, .45);
+
+  /* type */
+  --mono:    'Share Tech Mono', ui-monospace, monospace;
+  --display: 'Orbitron', var(--mono);
+
+  /* layout */
+  --maxw:    1080px;
+  --gutter:  32px;
+}
+
+@media (max-width: 640px) {
+  :root { --gutter: 18px; }
+}

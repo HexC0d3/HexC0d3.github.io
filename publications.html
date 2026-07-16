@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications // 0xCode</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <div class="frame"></div>
+  <nav data-nav></nav>
+
+  <main class="wrap">
+    <header class="sec sec-head">
+      <h1 class="sec-title" data-tag="pubs">Publications</h1>
+      <div class="sec-sub prompt">cat research/*.md</div>
+    </header>
+
+    <section class="pub-list" id="pubs"></section>
+  </main>
+
+  <footer><span class="c">&lt;/</span>0xCode<span class="c">&gt;</span> — entries are placeholders, swap the PUBS array</footer>
+
+  <script src="assets/site.js"></script>
+  <script>
+  /* ┌──────────────────────────────────────────────────────┐
+     │  EDIT HERE. One object per publication / post.         │
+     │  type   : "cve" | "paper" | "article"  (drives color)  │
+     │  venue  : where it lives (NVD, journal, Medium, blog)  │
+     │  href   : link to the CVE / PDF / article              │
+     └──────────────────────────────────────────────────────┘ */
+  const PUBS = [
+    { type:"cve", title:"CVE-2025-3612 — Reflected XSS in Graphlytic 5.0.7",
+      venue:"NVD / MITRE", date:"14 Apr 2025", href:"https://nvd.nist.gov/vuln/detail/CVE-2025-3612",
+      summary:"Graphytics version 5.0.7 is vulnerable to Reflected Cross-Site Scripting (XSS), allowing attackers to execute malicious JavaScript in a victim’s browser." },
+    { type:"article", title:"Encrypting disk and partitions using Cryptsetup (LUKS) without losing data.",
+      venue:"Medium", date:"3 Jan 2025", href:"https://hexc0de.medium.com/encrypting-disk-and-partitions-using-cryptsetup-luks-without-losing-data-41cf30ec7309",
+      summary:"How to encrypt disks or a partition with a constraints of not erasing the drive." },
+    // { type:"paper", title:"Title of the paper or whitepaper goes here",
+    //   venue:"Conference / Journal", date:"2025", href:"#",
+    //   summary:"One-line abstract: what you researched, the method, and the finding worth citing." },
+    
+  ];
+
+  const label = { cve:"CVE", paper:"Paper", article:"Article" };
+  document.getElementById("pubs").innerHTML = PUBS.map(p => `
+    <article class="pub reveal">
+      <div class="pub-top">
+        <span class="pill ${esc(p.type)}">${esc(label[p.type] || p.type)}</span>
+        <h3>${esc(p.title)}</h3>
+        <span class="meta">${esc(p.venue)} · ${esc(p.date)}</span>
+      </div>
+      <p>${esc(p.summary)}</p>
+      <div class="row">
+        <a class="btn" href="${esc(p.href)}" target="_blank" rel="noopener">read <span class="arw">↗</span></a>
+      </div>
+    </article>`).join("");
+
+  mountNav("HB");
+  initReveal();
+  </script>
+</body>
+</html>

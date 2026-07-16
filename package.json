@@ -1,0 +1,11 @@
+{
+  "name": "0xCode-portfolio",
+  "version": "1.0.0",
+  "description": "Terminal / cyberpunk developer portfolio — data-driven, no framework.",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "python3 build.py"
+  },
+  "license": "MIT"
+}

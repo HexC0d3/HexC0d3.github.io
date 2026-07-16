@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>0xCode // Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <!-- signature neon border -->
+  <div class="frame"></div>
+
+  <!-- sections are populated by js/main.js from data/content.js -->
+  <nav id="nav"></nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap" id="hero"></div>
+      <div class="wrap" id="hero-circuit"></div>
+    </section>
+
+    <section class="sec reveal" id="portfolio"><div id="portfolio-root"></div></section>
+    <section class="sec reveal" id="press"><div id="press-root"></div></section>
+    <section class="sec reveal" id="contact"><div id="contact-root"></div></section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]        # change if your default branch isn't "main"
+  workflow_dispatch:         # lets you trigger a deploy manually from the Actions tab
+
+# Grant the tokens the Pages deploy needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; drop superseded runs
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build single-file bundle
+        run: python build.py        # writes dist/index.html (stdlib only, no pip install)
+
+      - uses: actions/configure-pages@v5
+
+      - name: Upload dist/ as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects // 0xCode</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <div class="frame"></div>
+  <nav data-nav></nav>
+
+  <main class="wrap">
+    <header class="sec sec-head">
+      <h1 class="sec-title" data-tag="projects">Projects</h1>
+      <div class="sec-sub prompt">git log --oneline</div>
+    </header>
+
+    <div class="wip reveal">&lt;UNDER_CONSTRUCTION/&gt; more repos landing soon<span class="cur"></span></div>
+
+    <section class="proj-grid" id="projects"></section>
+  </main>
+
+  <footer><span class="c">&lt;/</span>0xCode<span class="c">&gt;</span> — tiles are placeholders, swap the PROJECTS array</footer>
+
+  <script src="assets/site.js"></script>
+  <script>
+  /* ┌──────────────────────────────────────────────────────┐
+     │  EDIT HERE. One object per project / idea.             │
+     │  status : "ongoing" | "wip" | "idea"  (drives color)   │
+     │  href   : repo / demo link                             │
+     └──────────────────────────────────────────────────────┘ */
+  const PROJECTS = [
+    { name:"graphlytic-xss-exploits", status:"v1.0",
+      desc:"PoC for Stored and Reflected XSS on Graphlytics", href:"https://github.com/HexC0d3/graphlytic-xss-exploits" },
+    { name:"discovery_toolkit", status:"v1.0",
+      desc:"Collection of Tools or custom scripts to perform Asset Discovery or Attack Surface enumeration", href:"https://github.com/HexC0d3/discovery_toolkit" },
+    { name:"Cipher_Hunter", status:"v1.0",
+      desc:"Script uses ciphersuite.info APIs to check CIPHER's strength {insecure,weak,secure,recommended}", href:"https://github.com/HexC0d3/Cipher_Hunter" },
+    { name:"IDGAF-PBA", status:"v1.1",
+      desc:"Just another Site Scrapper trying for Scrapper Paste Sites", href:"https://github.com/HexC0d3/IDGAF-PBA" },
+    { name:"IDGAF-AID", status:"v1.0",
+      desc:"Script to check IP reputation on AbuseIPDB.com", href:"https://github.com/HexC0d3/IDGAF-AID" },
+    { name:"site-mapper", status:"wip",
+      desc:"Python script to map your whole site/domain (not sub domains)", href:"https://github.com/HexC0d3/site-mapper" },
+    { name:"CloudHound", status:"idea",
+      desc:"Framework to enumerate and visualise Clouds for Red Teaming", href:"#" },
+  ];
+
+  const label = { ongoing:"ongoing", wip:"wip", idea:"idea" };
+  document.getElementById("projects").innerHTML = PROJECTS.map(p => `
+    <article class="proj reveal">
+      <div class="proj-top">
+        <h3>${esc(p.name)}</h3>
+        <span class="stat ${esc(p.status)}">${esc(label[p.status] || p.status)}</span>
+      </div>
+      <p>${esc(p.desc)}</p>
+      <div class="foot">
+        <a class="btn" href="${esc(p.href)}" target="_blank" rel="noopener">view repo <span class="arw">↗</span></a>
+      </div>
+    </article>`).join("");
+
+  mountNav("HB");
+  initReveal();
+  </script>
+</body>
+</html>

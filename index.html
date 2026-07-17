@@ -13,10 +13,13 @@
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="assets/rain.css" />
 </head>
 <body>
   <!-- signature neon border -->
   <div class="frame"></div>
+  <div class="rain-col rain-left" aria-hidden="true"><canvas></canvas></div>
+  <div class="rain-col rain-right" aria-hidden="true"><canvas></canvas></div>
 
   <!-- sections are populated by js/main.js from data/content.js -->
   <nav id="nav"></nav>
@@ -33,5 +36,6 @@
   </main>
 
   <script type="module" src="js/main.js"></script>
+  <script src="assets/rain.js"></script>
 </body>
 </html>

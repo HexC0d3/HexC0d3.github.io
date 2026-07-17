@@ -10,9 +10,9 @@ export function mountConnect(root, { connect, footer }) {
 
   const node = (s, i) => {
     const size = SIZES[i % SIZES.length];
-    const left = 4 + i * (82 / Math.max(n, 1));           // spread across the band
-    const top = 120 + Math.round(Math.sin(i * 1.15) * 95); // gentle scatter on Y
-    const style = `left:${left.toFixed(1)}%;top:${top}px;width:${size}px;height:${size}px;animation-delay:${(i * 0.5).toFixed(1)}s`;
+    const centerPct = 9 + (i + 0.5) * (82 / Math.max(n, 1)); // slot centers, symmetric 9% margins
+    const top = 120 + Math.round(Math.sin(i * 1.15) * 95);   // gentle scatter on Y
+    const style = `left:calc(${centerPct.toFixed(1)}% - ${size / 2}px);top:${top}px;width:${size}px;height:${size}px;animation-delay:${(i * 0.5).toFixed(1)}s`;
     return `
       <a class="node" style="${style}" href="${esc(s.href)}" target="_blank" rel="noopener noreferrer"${s.href === "#" ? ' onclick="return false"' : ""}>
         <span>
